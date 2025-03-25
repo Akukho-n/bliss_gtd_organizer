@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Adicionando Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-messaging.js"></script>
+
+  <meta name="google-signin-client_id" content="854174063637-kh6dfj8r7ajvrsunu0lu7nllv93emks8.apps.googleusercontent.com">
+
+
+  <!-- Meta tags padrão -->
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="serina_flutter">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/logo.png"/>
+
+  <title>Bliss GTD Organizer</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    console.log('Entrou no script do index.html');
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        console.log('Tentando registrar o Service Worker...');
+
+        navigator.serviceWorker.register('firebase-messaging-sw.js', {
+          scope: '/firebase-cloud-messaging-push-scope',
+        }).then(function(registration) {
+          console.log('Service Worker registrado com sucesso:', registration);
+        }).catch(function(error) {
+          console.log('Falha ao registrar o Service Worker:', error);
+        });
+      });
+    } else {
+      console.log('Service Workers não são suportados neste navegador.');
+    }
+  </script>
+</head>
+
+<body>
+
+<!-- Adiciona o script do Flutter -->
+<script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
