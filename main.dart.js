@@ -41986,7 +41986,7 @@ s.aL()
 s.d=s.a9z(s.a.c)
 s.uq()},
 a9z(a){switch(a){case"backlog":return"Talvez um dia"
-case"aguardando_reposta":return"Aguardando Resposta"
+case"aguardando_resposta":return"Aguardando Resposta"
 case"caixa_de_entrada":return"Caixa de Entrada"
 case"a_fazer":return"A Fazer"
 default:return"Status desconhecido"}},
@@ -42230,7 +42230,7 @@ $0(){var s=A.hq(new A.awm(),null,t.z)
 A.cJ(this.a,!1).ha(s)},
 $S:0}
 A.awm.prototype={
-$1(a){return new A.i9("aguardando_reposta",null)},
+$1(a){return new A.i9("aguardando_resposta",null)},
 $S:48}
 A.awx.prototype={
 $0(){var s=A.hq(new A.awl(),null,t.z)
